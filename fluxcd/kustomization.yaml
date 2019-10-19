@@ -1,0 +1,8 @@
+namespace: test-kustomization
+resources:
+  - namespace.yaml
+bases:
+  - github.com/fluxcd/flux//deploy
+patchesStrategicMerge:
+  - patch-default-ns.yaml
+  - patch.yaml
